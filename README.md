@@ -15,8 +15,8 @@ icon使用的是阿里的iconfont
 微信搜：即使跑步
 --二维码
 <p float="left">
-  .<div ><img src="https://user-images.githubusercontent.com/39527786/115858230-46b54580-a461-11eb-80dc-0f42fd3dcd8c.png" width="300" height="300" /></div>
-.<div ><img src="https://user-images.githubusercontent.com/39527786/115855855-53846a00-a45e-11eb-9e77-22e9cda8fb1d.png" width="200" height="300" /></div>
-.<div align=center><img src="https://user-images.githubusercontent.com/39527786/115855891-5c753b80-a45e-11eb-9409-9fa27abae0bf.png" width="200" height="300" /></div>
+<img src="https://user-images.githubusercontent.com/39527786/115858230-46b54580-a461-11eb-80dc-0f42fd3dcd8c.png" width="300" height="300" />
+<img src="https://user-images.githubusercontent.com/39527786/115855855-53846a00-a45e-11eb-9e77-22e9cda8fb1d.png" width="200" height="300" />
+<img src="https://user-images.githubusercontent.com/39527786/115855891-5c753b80-a45e-11eb-9409-9fa27abae0bf.png" width="200" height="300" />
 </p>
 
