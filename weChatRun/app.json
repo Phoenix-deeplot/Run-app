@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/logs/logs",
+    "pages/run/run",
+    "pages/userinfo/index",
+    "pages/setting/setting",
+    "pages/userprotocol/userprotocol",
+    "pages/suggestment/suggest",
+    "pages/userhistory/userhis"
+    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请求获取您的位置信息"
+    }
+  },
+  "requiredBackgroundModes": [
+    "location"
+   ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "即时跑步",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index", 
+        "text": "跑步",
+        "iconPath": "/resources/paobu.png",
+        "selectedIconPath": "/resources/paobu.png"        
+      },
+      {
+        "pagePath": "pages/userinfo/index",
+        "text": "个人中心",
+        "iconPath": "/resources/yonghu.png",
+        "selectedIconPath": "/resources/yonghu.png"
+      }
+    ],
+    "position": "bottom"
+  
+  },
+  "usingComponents": {
+    "iconfont": "/iconfont/iconfont"
+}
+}

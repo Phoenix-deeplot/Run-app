@@ -1,0 +1,74 @@
+<view class="mainView">
+    <!--标题-->
+
+    <view class="header">
+        <view class="bigTitle">
+            <image class="icon" src="/resources/run.png" mode="aspectFill" /><text class="titleText">即时跑步</text>
+        </view>
+        <view class="desc">--Let us run--</view>
+    </view>
+
+
+    <view class='circlePage'>
+        <view class='wrap'>
+            <!-- 圆形中间的文字 -->
+            <view class="circleText">
+                <text class='num'>{{finished}}%</text>
+                <text class="text">完成度</text>
+                <text class='num'>{{array[index].name}}</text>
+            </view>
+            <!-- 第一个canvas用于绘制白色圆形 第二个canvas用于绘制橙色圆形进度条 -->
+            <canvas canvas-id='canvas' class="progress"></canvas>
+            <canvas canvas-id='canvas_p' class="canvas" />
+        </view>
+        <view wx:for="{{pageNames}}" wx:key="key"  wx:for-item='item' class="start">
+            <view wx:if="{{plan===0}}">
+                <picker mode="selector"   header-text="选择您今天的运动目标" range="{{array}}" value="{{array[index].value}}" bindchange="changeValue" range-key="{{'name'}}" >
+                <button class="mini-btn" type="primary" size="mini"> {{item.name}}</button>
+        </picker>
+            </view>
+            <view wx:else>
+             <navigator wx:if="{{time!='0:00:00'}}" url="{{item.id}}/{{item.id}}?time={{time}}&meters={{meters}}">
+            <button class="mini-btn" type="primary" size="mini">{{time}} {{item.name}}</button>
+            </navigator>
+            <navigator wx:else url="{{item.id}}/{{item.id}}?time={{time}}&meters={{meters}}">
+            <button class="mini-btn" type="primary" size="mini">{{item.name}}</button>
+            </navigator>
+            </view>
+        </view>
+       
+        
+    </view>
+    <view class="line"></view>
+    <view class="hr" bindtap="changeviewtext">
+        <view class="item">
+            <view class="title">
+                <!-- <icon class="iconfont icon-shezhi"></icon> -->
+                <!-- <iconfont name="shezhi"></iconfont> -->
+                <image class="icon" src="/resources/recent.svg" mode="aspectFill" />
+            </view>
+            <view class="text">
+                <text class="item-text" >最近活动</text>
+            </view>
+            <view class="detail2" >
+                <iconfont name="{{changeview==true?'xia':'shang'}}" size="20"></iconfont>
+            </view>
+        </view>
+    </view>
+        <view  wx:if="{{changeview1==0}}"   class='recent'  style="display:{{changeview?'none':'block'}}">
+            <view class='recent' style="text-align:center">无最近活动</view>
+        </view>
+        <view  wx:else  class='recent' style="display:{{changeview?'none':'block'}}">
+        <view class="recentitem">
+            <iconfont name="wancheng" size="15" class="icontext"></iconfont>
+            <view>{{lastdatalist.finishedmeter}}km</view>
+        </view>
+        <view class="recentitem">
+            <iconfont name="weiwancheng" size="20" class="icontext"></iconfont>
+            <view>{{lastdatalist.Torunmeters}}km</view>
+        </view>
+        <view class="timetext">
+            <view  style="margin:0 auto">{{lastdatalist.timeString}} </view>
+        </view>
+        </view>
+</view>
